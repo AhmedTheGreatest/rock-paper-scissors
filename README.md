@@ -17,7 +17,7 @@ The Rock, Paper, Scissors project aims to build a console-based JavaScript progr
 
 ## Getting Started
 
-Follow these steps to set up and work on the Rock, Paper, Scissors project on your local machine if you want to contribute (If you want to view the website go to [Odin Landing Page](https://www.AhmedTheGreatest.github.io/rock-paper-scissors)):
+Follow these steps to set up and work on the Rock, Paper, Scissors project on your local machine if you want to contribute (If you want to view the website go to [Rock Paper Scissors](https://www.AhmedTheGreatest.github.io/rock-paper-scissors)):
 
 
 1. Clone the repository to your local machine using the command:
