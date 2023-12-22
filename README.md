@@ -13,7 +13,7 @@ Description: This project involves creating the classic game - Rock, Paper, Scis
 
 ## Overview
 
-The Rock, Paper, Scissors project aims to build a console-based JavaScript program from scratch. The primary goal is to replicate the classic game in the console. The project utilizes JavaScript for all the logic.
+The Rock, Paper, Scissors project aims to build a web-based clone of the classic Rock, Paper, Scissors using HTML (HyperText Markup Language), CSS (Cascading Style Sheets), and JavaScript.
 
 ## Getting Started
 
