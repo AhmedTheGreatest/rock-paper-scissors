@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-Description: This project involves creating the classic game - Rock, Paper, Scissors, but played in the console instead.
+Description: This project involves recreating the classic game of Rock, Paper, Scissors as a website.
 
 ## Table of Contents
 
