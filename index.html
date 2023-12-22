@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Odin Rock Paper Scissors!</title>
 </head>
-<body>
+<body class="dark-mode">
+    <div class="header">
+        <h1>Rock, Paper, Scissors</h1>
+    </div>
+    <div class="buttons">
+        <button id="rock-btn" class="move-btn">Rock</button>
+        <button id="paper-btn" class="move-btn">Paper</button>
+        <button id="scissors-btn" class="move-btn">Scissors</button>
+    </div>
+
+    <div class="scores">
+        <div id="results"></div>
+        <div id="player-score">Your Score: 0</div>
+        <div id="computer-score">Computer's Score: 0</div>
+    </div>
+
+    <div id="restart-modal" class="modal">
+        <div class="modal-content">
+            <h4 id="winner"></h4>
+            <button id="restart">Play again</button>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
