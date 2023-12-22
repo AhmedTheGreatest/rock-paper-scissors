@@ -2,6 +2,7 @@
 let playerScore = 0 // Stores the player's score
 let computerScore = 0 // Stores the computer's score
 
+// DOM Elements
 const rockButton = document.querySelector("#rock-btn")
 const paperButton = document.querySelector("#paper-btn")
 const scissorsButton = document.querySelector("#scissors-btn")
@@ -15,10 +16,12 @@ const winnerText = document.querySelector("#winner")
 const playerScoreText = document.querySelector("#player-score")
 const computerScoreText = document.querySelector("#computer-score")
 
+// Add an event listener to the play buttons
 rockButton.addEventListener("click", () => handleClick("Rock"))
 paperButton.addEventListener("click", () => handleClick("Paper"))
 scissorsButton.addEventListener("click", () => handleClick("Scissors"))
 
+// When the restart button is clicked, reset the scores, make the modal invisible, and update the score DOM elements
 restartButton.addEventListener("click", () => {
     playerScore = 0;
     computerScore = 0;
@@ -26,6 +29,7 @@ restartButton.addEventListener("click", () => {
     updateScore()
 })
 
+// Handle the "play" buttons click
 function handleClick(playerSelection) {
     playRound(playerSelection, getComputerChoice())
 }
@@ -47,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
     // If the game is a tie, set the winner to tie
     if (lowerPlayerSelection === lowerComputerSelection) {
         winner = "tie"
-    // If the player has won, set won to true, and increase the score
+    // If the player has won, set winner to player, and increase the player score
     } else if (
         (lowerPlayerSelection  === "rock" && lowerComputerSelection === "scissors") ||
         (lowerPlayerSelection === "paper" && lowerComputerSelection === "rock") ||
@@ -55,25 +59,27 @@ function playRound(playerSelection, computerSelection) {
     ) {
         winner = "player"
         playerScore++
-    // Else if the player has lost, set won to false
+    // Else if the computer has won, set the winner to computer and increase the computer score
     } else {
         winner = "computer"
         computerScore++
     }
 
+    // Updates the DOM elements
     displayWinner(winner, playerSelection, computerSelection)
     updateScore()
 }
 
+// Display the winner of the game or round
 function displayWinner(winner, playerSelection, computerSelection) {
     if (playerScore === 5) {
         results.textContent = "You WON the game!"
         winnerText.textContent = "You WON the game!"
-        modal.style.display = "block"
+        modal.style.display = "block" // Make the modal visible
     } else if (computerScore === 5) {
         results.textContent = "You LOST the game!"
         winnerText.textContent = "You LOST the game!"
-        modal.style.display = "block"
+        modal.style.display = "block" // Make the modal visible
     } else {
         switch (winner.toLowerCase()) {
             case "player":
@@ -95,6 +101,7 @@ function displayWinner(winner, playerSelection, computerSelection) {
     }
 }
 
+// Update the score DOM elements
 function updateScore() {
     playerScoreText.textContent = `Your Score: ${playerScore}`
     computerScoreText.textContent = `Computer's score: ${computerScore}`
